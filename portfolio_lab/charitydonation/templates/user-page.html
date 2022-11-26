@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <section id="user-profile" class="about-us">
+      <div class="about-us--text">
+        <h2>Profil użytkownika</h2>
+        <p>{{ user.first_name }}</p>
+        <p>{{ user.last_name }}</p>
+        <p>{{ user.email }}</p>
+
+      </div>
+
+    </section>
+{% endblock content %}

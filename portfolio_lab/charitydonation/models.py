@@ -28,13 +28,9 @@ class Donation(models.Model):
     institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
     address = models.CharField(max_length=128)
     phone_number = PhoneNumberField()
-    city = models.CharField(max_length=128) #charfield
-    zip_code = models.CharField(max_length=6) #regex walidacja
+    city = models.CharField(max_length=128)  # charfield
+    zip_code = models.CharField(max_length=6)  # regex walidacja
     pick_up_date = models.DateField()
     pick_up_time = models.TimeField()
     pick_up_comment = models.CharField(max_length=128)
     user = models.ForeignKey(User, null=True, default=None, on_delete=models.CASCADE)
-
-
-
-
